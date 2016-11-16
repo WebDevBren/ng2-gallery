@@ -18,7 +18,7 @@ import { ImageObject } from './interfaces';
         ])
     ],
     host: {
-        'role': 'region',
+        'role': 'marquee',
         'aria-label': 'Image Gallery'
     }
 })
