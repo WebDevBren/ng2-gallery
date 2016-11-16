@@ -1,0 +1,16 @@
+{
+  "name": "ng2gallery",
+  "version": "0.5.0",
+  "description": "Gallery Component for displaying images and/or videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brendan Ingham",
+  "repository": "https://github.com/WebDevBren/ng2-gallery",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/core": "^2.2.0",
+    "@types/es6-shim": "^0.31.32"
+  }
+}

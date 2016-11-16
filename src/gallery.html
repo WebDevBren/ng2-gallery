@@ -1,0 +1,11 @@
+<div class="image-preview"> 
+    <div class="actions"> </div>
+    <div class="image-container">
+        <img *ngFor="let i of visibleImages" [src]="i.source" [alt]="i.description"/>
+    </div>
+</div>
+<div class="thumbnails">
+    <div class="thumbnail-container" [style.transform]="thumbnailTransform"> 
+        <img class="thumbnail" *ngFor="let i of images" [src]="i.source" [alt]="i.description" [class.active]="isPreviewImage( i )" (click)="setVisible( i )"/>
+    </div>
+</div>

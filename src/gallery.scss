@@ -1,0 +1,72 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+ display: flex;
+    flex-direction: column;
+
+    .preview {
+        height: 600px;
+        position: relative;
+
+        .actions {
+            position: absolute;
+            height: 100%;
+            width: 100px;
+                button.actionBtn {
+                    border: 0;
+                }
+
+                &.next {
+                    button.actionBtn {
+                        background: #000;
+                        background: linear-gradient( right, rgba(0,0,0,0), rgba(0,0,0,0.5) );
+                    }
+                }
+
+                &.prev {
+                   button.actionBtn {
+                        background: #000;
+                        background: linear-gradient( left, rgba(0,0,0,0), rgba(0,0,0,0.5) );
+                    }
+                }
+        }
+    }
+
+    .thumbnails {
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+
+        .thumbnail-container {
+            height: 100px;
+            width: calc(150px * 7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s;
+            
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+            .thumbnail {
+                width: 150px;
+                height: 90px;
+                filter: grayscale(1) blur(1px);
+                margin: 5px 2px;
+                transition: filter 0.3s ease-in;
+                
+                cursor: pointer;
+
+                &.active, &:hover {
+                    filter: none;
+                }
+            }
+
+        }
+
+
+    }
+
+
+}
