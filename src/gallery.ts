@@ -1,7 +1,8 @@
 import { Component, Input, trigger, state, style, transition, animate } from '@angular/core';
+import { ImageObject } from './interfaces';
 
 @Component({
-    selector: 'sparta-gallery',
+    selector: 'gallery',
     templateUrl: 'gallery.html',
     styleUrls: [ 'gallery.scss' ],
     animations: [
@@ -15,7 +16,11 @@ import { Component, Input, trigger, state, style, transition, animate } from '@a
                 animate('100ms ease-out')
             ])
         ])
-    ]
+    ],
+    host: {
+        'role': 'region',
+        'aria-label': 'Image Gallery'
+    }
 })
 export class GalleryComponent {
 
@@ -26,7 +31,7 @@ export class GalleryComponent {
     @Input() images: Array<ImageObject>;
 
     get thumbnailTransform() {
-        return 'translate(-'+this._transform+'px)';
+        return 'translate(-' + this._transform + 'px)';
     }
 
     get maximumTransform() {
@@ -91,8 +96,3 @@ export class GalleryComponent {
 
 }
 
-export interface ImageObject {
-        source: string,
-        description: string,
-        title?: string
-}
