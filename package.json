@@ -1,6 +1,6 @@
 {
   "name": "ng2gallery",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Gallery Component for displaying images and/or videos",
   "main": "index.js",
   "scripts": {
